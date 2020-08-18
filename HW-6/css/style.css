@@ -1,0 +1,471 @@
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    min-width: 240px;
+}
+.container {
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    color: #231f06;
+    flex: 1 0 auto;
+}
+#header .container {
+    background: #d3b714;
+    padding: 0 3%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.main-nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+    display: none;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center; /* центрируем содержимое кнопки */
+    position: relative;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #eceff1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    transition: all 1s;
+    z-index: 1;
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover {
+    background-color: #cfd8dc;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+}
+#main .container {
+    align-content: stretch;
+}
+.text-container {
+    display: flex;
+    padding: 0 3%;
+    flex-grow: 2;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.text-container > p {
+    padding: 0 20px;
+}
+.container aside {
+    display: flex;
+    max-width: 210px;
+    min-height: 10vh;
+    width: 100%;
+    background: #9cb1c7;
+    font-weight: bold;
+    padding: 1% 0;
+    justify-content: center;
+    position: relative;
+}
+.text-container + aside {
+    background: #c798b9;
+    order: -1;
+}
+.cardcontainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: stretch;
+    list-style-type: none;
+    flex-wrap: wrap;
+    margin-top: -20px;
+    padding: 0;
+}
+h2 {
+    text-transform: uppercase;
+}
+.card {
+    width: calc(95% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.5s;
+}
+.card:hover {
+    box-shadow: 1px 1px 5px black;
+}
+.card img {
+    max-width: 100px;
+    max-height: 100px;
+    border: 10px solid #c7b7b7;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.card img:hover {
+    transform: scale(1.2);
+}
+.card p {
+    width: 100%;
+    flex-grow: 2;
+}
+.card a {
+    background: #685174;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 1s;
+}
+.card a:hover {
+    background: #cfa61d;
+    transform: rotate(720deg);
+}
+#footer .container {
+    padding: 10px;
+    background: #83e783;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+#footer .container > span {
+    font-weight: bold;
+}
+aside .plant {
+    height: 150px;
+    width: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    margin: auto;
+    background: #30862d;
+    z-index: 1;
+    transform-origin: center bottom;
+    animation: lean 3s 0.5s infinite;
+}
+aside .plant .leaf__one {
+    height: 30px;
+    width: 30px;
+    background: #30862d;
+    position: relative;
+    top: 10px;
+    left: 6px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transform: rotateZ(-67.5deg);
+    z-index: -2;
+}
+aside .plant .leaf__two {
+    height: 26px;
+    width: 26px;
+    background: #30862d;
+    position: relative;
+    top: 12px;
+    right: 26px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotateZ(67.5deg);
+}
+aside .plant .leaf__three {
+    height: 24px;
+    width: 24px;
+    background: #30862d;
+    position: relative;
+    top: 22px;
+    left: 6px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transform: rotateZ(-67.5deg);
+}
+aside .plant .flower {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: -80px;
+    left: -40px;
+    animation: rotate 3s 0.5s infinite;
+}
+aside .plant .flower::before {
+    content: '';
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    background: #c2000a;
+    border-radius: 100%;
+    z-index: -1;
+    box-shadow: -37px 15px #c2000a, -47px 54px #c2000a, -26px 89px #c2000a,
+        15px 93px #c2000a, 43px 63px #c2000a, 36px 21px #c2000a;
+}
+aside .plant .flower .head {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 100%;
+    background: #e8ad17;
+    box-shadow: 0 0 3px #333;
+    z-index: 10;
+}
+aside .plant .flower .head .face {
+    height: 26.6666666667px;
+    width: 26.6666666667px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: auto;
+    border: 4px transparent solid;
+    border-bottom: 4px black solid;
+    border-right: 4px black solid;
+    border-radius: 100%;
+    transform: rotate(45deg);
+    z-index: 10;
+    box-sizing: content-box;
+}
+aside .plant .flower .head .face::before,
+aside .plant .flower .head .face::after {
+    content: '';
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    top: -10px;
+    background: black;
+    border-radius: 100%;
+}
+aside .plant .flower .head .face::before {
+    top: 8px;
+    left: -16px;
+}
+aside .plant .flower .head .face::after {
+    top: -16px;
+    right: 8px;
+}
+aside .pot {
+    height: 80px;
+    width: 60px;
+    background: #4d2319;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 8px;
+    margin: auto;
+}
+aside .pot .top {
+    height: 20px;
+    width: 120px;
+    position: absolute;
+    left: -30px;
+    background: #431f16;
+    z-index: 2;
+}
+aside .pot .top::after {
+    content: '';
+    height: 14px;
+    width: 120px;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    border: 0;
+    border-top: 14px #220f0b solid;
+    border-radius: 100%;
+}
+aside .pot::before,
+aside .pot::after {
+    content: '';
+    position: absolute;
+    border-color: #4d2319;
+    border-top-width: 40px;
+    border-right-width: 15px;
+    border-bottom-width: 40px;
+    border-left-width: 15px;
+    border-style: solid;
+    border-bottom-color: transparent;
+}
+aside .pot::before {
+    left: -30px;
+    border-left-color: transparent;
+}
+aside .pot::after {
+    right: -30px;
+    border-right-color: transparent;
+}
+@keyframes lean {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(-22.5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    62.5% {
+        transform: rotate(22.5deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    12.5% {
+        transform: rotate(22.5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    62.5% {
+        transform: rotate(-22.5deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@media (max-width: 575px) {
+    .cardcontainer {
+        flex-direction: row;
+    }
+    .card {
+        min-width: 100%;
+    }
+    .menu__box {
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .card {
+        width: calc(95% / 2);
+    }
+    #main .container {
+        flex-direction: column;
+    }
+    .container aside {
+        max-width: 100%;
+    }
+    .text-container + aside {
+        order: 0;
+    }
+    aside::after {
+        content: 'Flower Here';
+        margin: auto 0;
+    }
+    aside .plant {
+        display: none;
+    }
+    aside .pot {
+        display: none;
+    }
+}
+@media (min-width: 992px) {
+    .menu__box {
+        display: flex;
+        position: relative;
+        visibility: visible;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: transparent;
+        box-shadow: none;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .menu__item:hover {
+        background-color: transparent;
+        color: #fff;
+        transition: all 2s;
+    }
+    .menu__btn {
+        display: none;
+    }
+}

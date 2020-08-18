@@ -1,0 +1,52 @@
+/* приоритет 3 */
+blockquote {
+    margin: 0;
+    color: green;
+}
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+blockquote p::before {
+    content: "\201C";
+}
+blockquote p::after {
+    content: "\201D";
+}
+a[href^="https://"]
+{
+    color: red;
+}
+.list > li:last-child > a {
+    background: green;
+}
+ul + p {
+    font-size: 26px;
+}
+.text-box > h3:first-child {
+    color: pink;
+}
+#greycol {
+    color: gray;
+}
+div.text-box p:only-child {
+    color: red;
+}
+h3 ~ p:nth-last-of-type(2) {
+    color: green;
+}
+.yellow {
+    color: yellow;
+}
+.bg-box {
+    width: 640px;
+    height: 360px;
+    background-image: url("../images/grass.png"), url("../images/lamp.png"),
+        url("../images/doughnut.png"), url("../images/Hedgehog.png"),
+        url("../images/imagehome.jpg");
+    background-position: bottom, top, right, left, center;
+    background-color: green;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, no-repeat;
+    background-size: 150px auto, 34px auto, 20px auto, 20px auto, 320px auto;
+}
