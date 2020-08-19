@@ -320,6 +320,10 @@ h2 {
     line-height: 22px;
     text-decoration: none;
 }
+.card_text a:hover,
+.card_text h3:hover {
+    color: #5b6ceb;
+}
 .block_img {
     list-style: none;
     display: flex;
