@@ -234,6 +234,12 @@
                                     <img src="images/img-13.jpg" alt="" />
                                 </div>
                             </div>
+                            <div id="my-arrow-prev">
+                                <span class="icon-keyboard_arrow_left"></span>
+                            </div>
+                            <div id="my-arrow-next">
+                                <span class="icon-keyboard_arrow_right"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,10 +256,11 @@
         <script type="text/javascript" src="slick/slick/slick.min.js"></script>
         <script>
             $(document).ready(function () {
-                $('.single-item').slick({
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    autoplay: true,
+                $(".single-item").slick({
+                    arrows: true,
+                    infinite: true,
+                    nextArrow: document.querySelector("#my-arrow-next"),
+                    prevArrow: document.querySelector("#my-arrow-prev"),
                 });
             });
         </script>
