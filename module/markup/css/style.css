@@ -1,12 +1,12 @@
 body {
     min-width: 320px;
-    font-family: "Open Sans - Semi Bold";
+    font-family: 'Open Sans - Semi Bold';
     font-size: 14px;
     font-weight: 400;
     color: #555555;
 }
 h1 {
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 48px;
     line-height: 72px;
     font-weight: 700;
@@ -15,7 +15,7 @@ h1 {
     padding: 0;
 }
 h2 {
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 30px;
     font-weight: 700;
     color: #5b6ceb;
@@ -80,11 +80,11 @@ h2 {
     background-color: #5363db;
 }
 .menu__btn > span::before {
-    content: "";
+    content: '';
     top: -8px;
 }
 .menu__btn > span::after {
-    content: "";
+    content: '';
     top: 8px;
 }
 .menu__box {
@@ -113,12 +113,12 @@ h2 {
     color: #5363db;
 }
 .menu__item::before {
-    content: "";
+    content: '';
     width: 0;
     transition: width 1s;
 }
 .menu__item:hover::before {
-    content: "";
+    content: '';
     border-bottom: 1px solid #5363db;
     width: 25px;
     position: absolute;
@@ -156,7 +156,7 @@ h2 {
     position: relative;
 }
 .main_form_container::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -184,7 +184,7 @@ h2 {
     padding: 30px;
 }
 .form_container h2 {
-    font-family: "Open Sans - Semi Bold";
+    font-family: 'Open Sans - Semi Bold';
     font-size: 26px;
     font-weight: 400;
     line-height: normal;
@@ -217,7 +217,7 @@ h2 {
 .form_btn button {
     padding: 16px 64px;
     margin: 13px 0 5px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 16px;
     font-weight: 700;
     background: #5b6ceb;
@@ -242,7 +242,7 @@ h2 {
 }
 
 .main_text span {
-    font-family: "Freestyle Script";
+    font-family: 'Freestyle Script';
     font-size: 40px;
     font-weight: 400;
     margin-top: 50px;
@@ -260,7 +260,7 @@ h2 {
     padding-bottom: 75px;
 }
 .block_text span {
-    font-family: "Freestyle Script";
+    font-family: 'Freestyle Script';
     font-size: 41px;
     font-weight: 400;
     line-height: 61.49px;
@@ -309,7 +309,7 @@ h2 {
 }
 .card_text h3 {
     color: #777777;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-size: 20px;
     font-weight: 700;
     line-height: 45px;
@@ -343,7 +343,7 @@ h2 {
     overflow: hidden;
 }
 .block_img a::before {
-    content: "";
+    content: '';
     position: absolute;
     width: 0%;
     height: 0%;
@@ -354,12 +354,12 @@ h2 {
     opacity: 0.8;
 }
 .block_img a::after {
-    content: "\e986";
+    content: '\e986';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family: "icomoon";
+    font-family: 'icomoon';
     font-size: 20px;
     width: 0;
     height: 0;
@@ -383,8 +383,6 @@ h2 {
 }
 .main_about_us {
     display: flex;
-    align-items: stretch;
-    justify-content: center;
     padding: 75px 0;
 }
 .about_us_text {
@@ -394,15 +392,13 @@ h2 {
     padding: 5px 140px 0 0;
     line-height: 22px;
 }
-.about_us_slider {
+.main_slider {
     width: 50%;
     display: flex;
-    align-content: stretch;
     align-items: center;
 }
 .single-item {
-    position: absolute;
-    width: 100%;
+    width: calc(100% - 100px);
 }
 .single-item img {
     width: 100%;
@@ -411,18 +407,11 @@ h2 {
 #my-arrow-next {
     display: flex;
     z-index: 1;
-    width: 100%;
 }
 #my-arrow-prev {
     order: -1;
 }
-#my-arrow-prev span {
-    left: 50%;
-}
-#my-arrow-next span {
-    right: 50%;
-}
-.about_us_slider span {
+.main_slider span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -436,9 +425,22 @@ h2 {
     border-radius: 50%;
     position: relative;
 }
+.main_slider span:hover {
+    background: #5b6ceb;
+    color: #ffffff;
+}
+#my-arrow-prev span {
+    left: 50%;
+}
+#my-arrow-next span {
+    right: 50%;
+}
 @media (max-width: 1399px) {
     .container {
         padding: 20px 15px;
+    }
+    .about_us_text p {
+        padding-right: 80px;
     }
 }
 @media (min-width: 768px) {
@@ -502,6 +504,19 @@ h2 {
         width: 100%;
         height: 100%;
     }
+    .main_about_us {
+        flex-direction: column;
+        padding: 0;
+    }
+    .main_slider {
+        width: 100%;
+    }
+    .about_us_text {
+        width: 100%;
+    }
+    .about_us_text p {
+        padding: 0 0 25px;
+    }
 }
 @media (max-width: 569px) {
     .column_card {
@@ -511,5 +526,12 @@ h2 {
     .card {
         width: 100%;
         margin-bottom: 20px;
+    }
+    .single-item {
+        width: calc(100% - 50px);
+    }
+    .main_slider span {
+        width: 25px;
+        height: 25px;
     }
 }

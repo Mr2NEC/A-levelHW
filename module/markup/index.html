@@ -8,10 +8,10 @@
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="css/all.css" />
-        <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="slick/slick/slick.css" />
         <link rel="stylesheet" href="slick/slick/slick-theme.css" />
+        <link rel="stylesheet" href="css/all.css" />
+        <link rel="stylesheet" href="css/style.css" />
         <title>Document</title>
         <style>
             @font-face {
@@ -225,8 +225,11 @@
                                 fugiat nulla pariatur lorem ispum loting sokui.
                             </p>
                         </div>
-                        <div class="about_us_slider">
+                        <div class="main_slider">
                             <div class="single-item">
+                                <div>
+                                    <img src="images/img-13.jpg" alt="" />
+                                </div>
                                 <div>
                                     <img src="images/img-13.jpg" alt="" />
                                 </div>
@@ -256,11 +259,11 @@
         <script type="text/javascript" src="slick/slick/slick.min.js"></script>
         <script>
             $(document).ready(function () {
-                $(".single-item").slick({
+                $('.single-item').slick({
                     arrows: true,
                     infinite: true,
-                    nextArrow: document.querySelector("#my-arrow-next"),
-                    prevArrow: document.querySelector("#my-arrow-prev"),
+                    nextArrow: document.querySelector('#my-arrow-next'),
+                    prevArrow: document.querySelector('#my-arrow-prev'),
                 });
             });
         </script>
