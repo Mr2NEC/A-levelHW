@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -69,13 +69,24 @@
                                     placeholder="Enter your phone"
                                 />
                                 <select class="chose_class">
-                                    <option value="Chose your class"
-                                        >Chose your class</option
+                                    <option
+                                        label="Chose your class"
+                                        value="Chose your class"
                                     >
-                                    <option value="class1">class1</option>
-                                    <option value="class2">class2</option>
-                                    <option value="class3">class3</option>
-                                    <option value="class4">class4</option>
+                                        Chose your class
+                                    </option>
+                                    <option label="class1" value="class1">
+                                        class1
+                                    </option>
+                                    <option label="class2" value="class2">
+                                        class2
+                                    </option>
+                                    <option label="class3" value="class3">
+                                        class3
+                                    </option>
+                                    <option label="class4" value="class4">
+                                        class4
+                                    </option>
                                 </select>
                                 <div class="form_btn">
                                     <button type="submit" form="info_form">
@@ -184,49 +195,49 @@
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-05.jpg);"
+                            style="background-image: url(images/img-05.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-06.jpg);"
+                            style="background-image: url(images/img-06.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-07.jpg);"
+                            style="background-image: url(images/img-07.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-08.jpg);"
+                            style="background-image: url(images/img-08.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-09.jpg);"
+                            style="background-image: url(images/img-09.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-10.jpg);"
+                            style="background-image: url(images/img-10.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-11.jpg);"
+                            style="background-image: url(images/img-11.jpg)"
                         ></a>
                     </li>
                     <li>
                         <a
                             href="#"
-                            style="background-image: url(images/img-12.jpg);"
+                            style="background-image: url(images/img-12.jpg)"
                         ></a>
                     </li>
                 </ul>
@@ -439,14 +450,14 @@
                                     <span>49</span>
                                     <span>/ month</span>
                                 </div>
-                                <div class="price_info">
-                                    <ul>
-                                        <li>ENTRY DATE: MON – FRI</li>
+                                <div class="price_info_card">
+                                    <div class="price_info">
+                                        <span>ENTRY DATE: MON – FRI</span>
                                         <hr />
-                                        <li>ENTRY TIME: 8A.M – 8P.M</li>
+                                        <span>ENTRY TIME: 8A.M – 8P.M</span>
                                         <hr />
-                                        <li>NUTRITION ADVICER: NO</li>
-                                    </ul>
+                                        <span>NUTRITION ADVICER: NO</span>
+                                    </div>
                                 </div>
                                 <div class="price_btn">
                                     <a href="#">Buy now</a>
@@ -458,14 +469,14 @@
                                     <span>69</span>
                                     <span>/ month</span>
                                 </div>
-                                <div class="price_info">
-                                    <ul>
-                                        <li>ENTRY DATE: MON – FRI</li>
+                                <div class="price_info_card">
+                                    <div class="price_info">
+                                        <span>ENTRY DATE: MON – FRI</span>
                                         <hr />
-                                        <li>ENTRY TIME: 8A.M – 8P.M</li>
+                                        <span>ENTRY TIME: 8A.M – 8P.M</span>
                                         <hr />
-                                        <li>NUTRITION ADVICER: YES</li>
-                                    </ul>
+                                        <span>NUTRITION ADVICER: YES</span>
+                                    </div>
                                 </div>
                                 <div class="price_btn">
                                     <a href="#">Buy now</a>
@@ -477,14 +488,14 @@
                                     <span>99</span>
                                     <span>/ month</span>
                                 </div>
-                                <div class="price_info">
-                                    <ul>
-                                        <li>ENTRY DATE: MON – SUN</li>
+                                <div class="price_info_card">
+                                    <div class="price_info">
+                                        <span>ENTRY DATE: MON – SUN</span>
                                         <hr />
-                                        <li>ENTRY TIME: 8A.M – 8P.M</li>
+                                        <span>ENTRY TIME: 8A.M – 8P.M</span>
                                         <hr />
-                                        <li>NUTRITION ADVICER: YES</li>
-                                    </ul>
+                                        <span>NUTRITION ADVICER: YES</span>
+                                    </div>
                                 </div>
                                 <div class="price_btn">
                                     <a href="#">Buy now</a>
@@ -580,7 +591,7 @@
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"
         ></script>
-        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script src="js/slick.min.js"></script>
         <script>
             $(document).ready(function () {
                 $('.single-item').slick({

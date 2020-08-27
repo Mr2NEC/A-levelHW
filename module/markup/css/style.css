@@ -590,7 +590,7 @@ h2 {
     font-size: 18px;
     padding-top: 24px;
 }
-.price_info {
+.price_info_card {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -603,12 +603,11 @@ h2 {
     padding: 50px 10px;
     align-items: center;
 }
-.price_info ul {
+.price_info {
     display: flex;
     max-width: 100%;
     flex-wrap: wrap;
     flex-direction: column;
-    list-style: none;
     padding: 0;
     margin: 0;
 }
